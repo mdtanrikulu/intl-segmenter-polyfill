@@ -1,14 +1,16 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@babel/runtime/regenerator'), require('@babel/runtime/helpers/slicedToArray'), require('@babel/runtime/helpers/classCallCheck'), require('@babel/runtime/helpers/createClass'), require('@babel/runtime/helpers/asyncToGenerator'), require('fast-text-encoding')) :
-  typeof define === 'function' && define.amd ? define(['exports', '@babel/runtime/regenerator', '@babel/runtime/helpers/slicedToArray', '@babel/runtime/helpers/classCallCheck', '@babel/runtime/helpers/createClass', '@babel/runtime/helpers/asyncToGenerator', 'fast-text-encoding'], factory) :
-  (global = global || self, factory(global.IntlSegmenterPolyfill = {}, global._regeneratorRuntime, global._slicedToArray, global._classCallCheck, global._createClass, global._asyncToGenerator));
-}(this, (function (exports, _regeneratorRuntime, _slicedToArray, _classCallCheck, _createClass, _asyncToGenerator) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@babel/runtime/helpers/slicedToArray'), require('@babel/runtime/helpers/classCallCheck'), require('@babel/runtime/helpers/createClass'), require('@babel/runtime/helpers/asyncToGenerator'), require('@babel/runtime/regenerator'), require('fast-text-encoding')) :
+  typeof define === 'function' && define.amd ? define(['exports', '@babel/runtime/helpers/slicedToArray', '@babel/runtime/helpers/classCallCheck', '@babel/runtime/helpers/createClass', '@babel/runtime/helpers/asyncToGenerator', '@babel/runtime/regenerator', 'fast-text-encoding'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.IntlSegmenterPolyfill = {}, global._slicedToArray, global._classCallCheck, global._createClass, global._asyncToGenerator, global._regeneratorRuntime));
+})(this, (function (exports, _slicedToArray, _classCallCheck, _createClass, _asyncToGenerator, _regeneratorRuntime) { 'use strict';
 
-  _regeneratorRuntime = _regeneratorRuntime && Object.prototype.hasOwnProperty.call(_regeneratorRuntime, 'default') ? _regeneratorRuntime['default'] : _regeneratorRuntime;
-  _slicedToArray = _slicedToArray && Object.prototype.hasOwnProperty.call(_slicedToArray, 'default') ? _slicedToArray['default'] : _slicedToArray;
-  _classCallCheck = _classCallCheck && Object.prototype.hasOwnProperty.call(_classCallCheck, 'default') ? _classCallCheck['default'] : _classCallCheck;
-  _createClass = _createClass && Object.prototype.hasOwnProperty.call(_createClass, 'default') ? _createClass['default'] : _createClass;
-  _asyncToGenerator = _asyncToGenerator && Object.prototype.hasOwnProperty.call(_asyncToGenerator, 'default') ? _asyncToGenerator['default'] : _asyncToGenerator;
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var _slicedToArray__default = /*#__PURE__*/_interopDefaultLegacy(_slicedToArray);
+  var _classCallCheck__default = /*#__PURE__*/_interopDefaultLegacy(_classCallCheck);
+  var _createClass__default = /*#__PURE__*/_interopDefaultLegacy(_createClass);
+  var _asyncToGenerator__default = /*#__PURE__*/_interopDefaultLegacy(_asyncToGenerator);
+  var _regeneratorRuntime__default = /*#__PURE__*/_interopDefaultLegacy(_regeneratorRuntime);
 
   var BREAK_TYPES = {
     grapheme: 0,
@@ -49,9 +51,9 @@
   };
 
   var createIntlSegmenterPolyfillFromInstance = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee(wasmInstance, values) {
+    var _ref = _asyncToGenerator__default["default"]( /*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee(wasmInstance, values) {
       var allocStr;
-      return _regeneratorRuntime.wrap(function _callee$(_context) {
+      return _regeneratorRuntime__default["default"].wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
@@ -69,13 +71,13 @@
 
               return _context.abrupt("return", /*#__PURE__*/function () {
                 function Segmenter(locale, options) {
-                  _classCallCheck(this, Segmenter);
+                  _classCallCheck__default["default"](this, Segmenter);
 
                   this.locale = locale;
                   this.options = options || {};
                 }
 
-                _createClass(Segmenter, [{
+                _createClass__default["default"](Segmenter, [{
                   key: "segment",
                   value: function segment(input) {
                     var locale = this.locale;
@@ -84,12 +86,12 @@
                     values.current = [];
 
                     var _allocStr = allocStr(input),
-                        _allocStr2 = _slicedToArray(_allocStr, 2),
+                        _allocStr2 = _slicedToArray__default["default"](_allocStr, 2),
                         inputPtr = _allocStr2[0],
                         inputView = _allocStr2[1];
 
                     var _allocStr3 = allocStr(locale),
-                        _allocStr4 = _slicedToArray(_allocStr3, 1),
+                        _allocStr4 = _slicedToArray__default["default"](_allocStr3, 1),
                         localePtr = _allocStr4[0];
 
                     exports.utf8_break_iterator(BREAK_TYPES[granularity], localePtr, inputPtr, inputView.length);
@@ -97,7 +99,7 @@
                     exports.free(inputPtr);
                     var index = 0;
                     var segments = values.current.map(function (_ref2) {
-                      var _ref3 = _slicedToArray(_ref2, 3),
+                      var _ref3 = _slicedToArray__default["default"](_ref2, 3),
                           start = _ref3[0],
                           end = _ref3[1],
                           segmentType = _ref3[2];
@@ -159,10 +161,10 @@
   };
 
   var createIntlSegmenterPolyfillFromFactory = /*#__PURE__*/function () {
-    var _ref5 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee2(wasmFactory) {
+    var _ref5 = _asyncToGenerator__default["default"]( /*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee2(wasmFactory) {
       var values, _yield$wasmFactory, instance;
 
-      return _regeneratorRuntime.wrap(function _callee2$(_context2) {
+      return _regeneratorRuntime__default["default"].wrap(function _callee2$(_context2) {
         while (1) {
           switch (_context2.prev = _context2.next) {
             case 0:
@@ -192,10 +194,10 @@
     };
   }();
   var createIntlSegmenterPolyfill = /*#__PURE__*/function () {
-    var _ref6 = _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime.mark(function _callee3(wasm) {
+    var _ref6 = _asyncToGenerator__default["default"]( /*#__PURE__*/_regeneratorRuntime__default["default"].mark(function _callee3(wasm) {
       var values, _yield$instantiateWas, instance;
 
-      return _regeneratorRuntime.wrap(function _callee3$(_context3) {
+      return _regeneratorRuntime__default["default"].wrap(function _callee3$(_context3) {
         while (1) {
           switch (_context3.prev = _context3.next) {
             case 0:
@@ -230,4 +232,4 @@
 
   Object.defineProperty(exports, '__esModule', { value: true });
 
-})));
+}));

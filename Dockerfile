@@ -1,6 +1,6 @@
 FROM surferseo/emsdk
 
-RUN apt-get update && apt-get install -y git
+RUN apt-get --allow-releaseinfo-change-suite update && apt-get install -y git
 
 WORKDIR /
 RUN git clone https://github.com/unicode-org/icu

@@ -7,9 +7,9 @@ import logging
 import os
 import shutil
 
-TAG = 'release-67-1'
-VERSION = '67_1'
-HASH = 'e0c366e097d5cd9840e7c440a87f8f338cc59b1ed7ec527eecbb5671c6c48261b217424a7ee95870915c19b70b1afa2e486100e73acae3515d30bb3872661c11'
+TAG = 'release-71-1'
+VERSION = '71_1'
+HASH = '4e4e2bbf64432a096ae2325d71fe2f9fff899f3797a3a585059aada715cdc51f3fb867a53d274a8c20c41c98905d3daec88fad09d5e0ca9fe4e624b2b8010d30'
 SUBDIR = ''
 
 def get(ports, settings, shared):

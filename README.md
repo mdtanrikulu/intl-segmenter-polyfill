@@ -118,4 +118,11 @@ Besides Chrome, Firefox and Safari with reasonable versions, it polyfills TextEn
 
 ## Building
 
+For M1, set these env variables before build;
+```bash
+export DOCKER_BUILDKIT=0                                                
+export COMPOSE_DOCKER_CLI_BUILD=0
+export DOCKER_DEFAULT_PLATFORM=linux/amd64
+```
+
 Running `./build.sh` while having docker installed should output `break_iterator.wasm` ready to be used in Node, browsers or Wasmer without a lot of special treatment (see examples above or `examples/`).
